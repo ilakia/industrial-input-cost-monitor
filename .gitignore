@@ -1,0 +1,34 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Secrets: only .env.example is committed
+.env
+
+# Data and database files are rebuilt by the pipeline, never committed
+data/
+*.duckdb
+*.duckdb.wal
+*.xlsx
+*.csv
+# ...except the small files the project needs to run and test offline
+!dbt_project/seeds/*.csv
+!tests/fixtures/**
+
+# dbt build output
+dbt_project/target/
+dbt_project/logs/
+dbt_project/dbt_packages/
+dbt_project/.user.yml
+logs/
+
+# Private brief, not part of the public repo
+HANDOVER_input_cost_monitor.md
+
+# OS and editor files
+.DS_Store
+.vscode/
+.idea/

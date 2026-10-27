@@ -1,0 +1,21 @@
+name: input_cost_monitor
+version: "0.1.0"
+config-version: 2
+
+# Must match the top-level key in profiles.yml
+profile: input_cost_monitor
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+# Medallion layers: bronze = raw as received, silver = cleaned, gold = business tables
+models:
+  input_cost_monitor:
+    bronze:
+      +materialized: view
+    silver:
+      +materialized: table
+    gold:
+      +materialized: table

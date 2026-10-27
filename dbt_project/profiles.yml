@@ -1,0 +1,9 @@
+# Kept inside the repo (not ~/.dbt) so every laptop and CI use the same setup.
+# No secrets here: DuckDB is a local file. The path is relative to dbt_project/.
+input_cost_monitor:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('DUCKDB_PATH', '../data/warehouse.duckdb') }}"
+      threads: 1

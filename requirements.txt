@@ -1,0 +1,6 @@
+# Exact versions tested on Python 3.12. New libraries are added in the milestone that needs them.
+dbt-core==1.12.6
+dbt-duckdb==1.11.1
+duckdb==2.0.0
+pytest==9.1.1
+ruff==0.17.3

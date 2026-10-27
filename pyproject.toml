@@ -1,0 +1,17 @@
+[project]
+name = "industrial-input-cost-monitor"
+version = "0.1.0"
+description = "Local data pipeline: monthly euro cost index for an illustrative industrial product"
+requires-python = ">=3.12,<3.13"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["dbt_project/target", "dbt_project/dbt_packages"]
+
+[tool.ruff.lint]
+# E/F: standard errors, I: import sorting, B: common bug patterns, UP: modern syntax
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
