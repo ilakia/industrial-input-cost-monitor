@@ -1,6 +1,17 @@
 # Exact versions tested on Python 3.12. New libraries are added in the milestone that needs them.
+
+# Transformation
 dbt-core==1.12.6
 dbt-duckdb==1.11.1
 duckdb==2.0.0
+
+# Ingestion
+requests==2.34.2
+urllib3==2.8.0
+pandas==3.1.0
+numpy==2.5.4
+openpyxl==3.1.5
+
+# Testing and linting
 pytest==9.1.1
 ruff==0.17.3

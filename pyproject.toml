@@ -15,3 +15,5 @@ select = ["E", "F", "I", "B", "UP"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+# Let tests import the project's packages (ingestion, ...) from the repo root
+pythonpath = ["."]
